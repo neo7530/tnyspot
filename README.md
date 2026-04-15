@@ -10,6 +10,7 @@ DMR‑ID‑ und Talkgruppen‑Downloads sowie eine flexible Konfiguration direkt
 ## 🚀 Features
 
 - **DMR Simplex Hotspot** (MMDVM‑kompatibel)
+- **Neopixel Status-Anzeige**
 - **Voice + Data, Group & private**
 - **JITTER-Buffer für Netzwerk-Traffic**
 - **Webinterface** zur Konfiguration (WLAN, Netzwerk, Optionen, Lizenz)
