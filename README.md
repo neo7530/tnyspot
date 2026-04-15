@@ -11,7 +11,7 @@ DMR‑ID‑ und Talkgruppen‑Downloads sowie eine flexible Konfiguration direkt
 
 - **DMR Simplex Hotspot** (MMDVM‑kompatibel)
 - **Webinterface** zur Konfiguration (WLAN, Netzwerk, Optionen, Lizenz)
-- **Offline Talker‑Alias‑Erzeugung** direkt auf dem Gerät
+- **Offline Talker‑Alias‑Erzeugung** direkt auf dem Gerät (Motorola-kompatibel)
 - **DMR‑ID‑Download** (TSV oder Semicolon‑getrennt)
 - **Talkgruppen‑Download** (CSV)
 - **Komprimierter Download** für große DMR‑ID‑Dateien (>2 MB)
@@ -42,7 +42,7 @@ Der TNYSPOT ist optimiert für den **Waveshare ESP32‑S3 Zero**.
 1. ESP32‑S3 Zero vorbereiten
 ESP32‑S3 Zero per USB‑C anschließen
 
-Firmware mit esptool.py, PlatformIO oder Arduino IDE flashen
+Firmware mit flash_download_tool von Espressif flashen
 
 Gerät startet automatisch im Access‑Point‑Modus
 
@@ -73,7 +73,7 @@ GND verbinden
 4. Webinterface öffnen
 Nach dem Start erzeugt der Hotspot einen Access‑Point:
 
-SSID: TNYSPOT
+SSID: TNYSPOT_Config
 
 Passwort: TINYSPOT
 
@@ -123,7 +123,7 @@ Offline‑Speicherung
 🔐 Lizenzsystem
 Ohne Lizenz:
 
-RX‑only
+RX‑only, kein Talker-Alias
 
 Gespräche aus dem Netzwerk können gehört werden
 
@@ -131,17 +131,10 @@ TX ist gesperrt
 
 Mit Lizenz:
 
-TX wird freigeschaltet
+TX und Talker-Alias wird freigeschaltet
 
 Lizenz ist an die Chip‑ID des ESP32‑S3 gebunden
 
-Signiert (ECDSA) und nicht manipulierbar
-
-Lizenz anfordern:
-
-Code
-tnyspot@von-ziemdorf.de
-Bitte die Chip‑ID des Geräts mitsenden (wird im Web‑IF angezeigt).
 
 🔒 Sicherheit
 Webinterface‑Passwort änderbar
@@ -155,9 +148,9 @@ Keine Cloud‑Abhängigkeit
 📦 Geplante Features / Ideen
 Multi‑Mode (D‑STAR, YSF)
 
-Bluetooth‑Konfiguration
+DMR Duplex-Betrieb
 
-Firmware‑Update über Web‑IF
+Bluetooth‑Konfiguration
 
 Erweiterte UI‑Widgets
 
