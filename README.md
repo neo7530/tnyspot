@@ -28,6 +28,7 @@ DMR‑ID‑ und Talkgruppen‑Downloads sowie eine flexible Konfiguration direkt
 ## 🔧 Hardware: Waveshare ESP32‑S3 Zero
 
 Der TNYSPOT ist optimiert für den **Waveshare ESP32‑S3 Zero**.
+(Für weitere Hardware-Unterstützung, Pinbelegungen etc. bitte per Mail Kontakt aufnehmen. **WICHTIG:** PSRAM wird dringend benötigt)
 
 ### 📌 Pinbelegung
 
