@@ -10,6 +10,8 @@ DMR‑ID‑ und Talkgruppen‑Downloads sowie eine flexible Konfiguration direkt
 ## 🚀 Features
 
 - **DMR Simplex Hotspot** (MMDVM‑kompatibel)
+- **Voice + Data, Group & private**
+- **JITTER-Buffer für Netzwerk-Traffic**
 - **Webinterface** zur Konfiguration (WLAN, Netzwerk, Optionen, Lizenz)
 - **Offline Talker‑Alias‑Erzeugung** direkt auf dem Gerät (Motorola-kompatibel)
 - **DMR‑ID‑Download** (TSV oder Semicolon‑getrennt)
@@ -146,7 +148,9 @@ Lizenzprüfung offline, sicher signiert
 Keine Cloud‑Abhängigkeit
 
 📦 Geplante Features / Ideen
-Multi‑Mode (D‑STAR, YSF)
+Multi‑Mode (D‑STAR, YSF, POCSAG / DAPNET, GPS)
+
+Nextion Display
 
 DMR Duplex-Betrieb
 
