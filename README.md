@@ -1,2 +1,179 @@
-# tnyspot
-ESP32 based DMR-Hotspot
+# TNYSPOT – ESP32‑S3 DMR Hotspot
+
+TNYSPOT ist ein kompakter, vollständig eigenständiger **DMR Simplex Hotspot** auf Basis des  
+**Waveshare ESP32‑S3 Zero**.  
+Er bietet ein modernes Webinterface, Offline‑Talker‑Alias‑Erzeugung, programmierbare  
+DMR‑ID‑ und Talkgruppen‑Downloads sowie eine flexible Konfiguration direkt auf dem Gerät.
+
+---
+
+## 🚀 Features
+
+- **DMR Simplex Hotspot** (MMDVM‑kompatibel)
+- **Webinterface** zur Konfiguration (WLAN, Netzwerk, Optionen, Lizenz)
+- **Offline Talker‑Alias‑Erzeugung** direkt auf dem Gerät
+- **DMR‑ID‑Download** (TSV oder Semicolon‑getrennt)
+- **Talkgruppen‑Download** (CSV)
+- **Komprimierter Download** für große DMR‑ID‑Dateien (>2 MB)
+- **Speicher für bis zu 5 WLAN‑Netzwerke**
+- **FreeDMR / FDMR+ Optionszeile**
+- **Passwortänderung für Hotspot‑AP und Webinterface**
+- **OLED‑Display‑Unterstützung (SSD1306)**
+- **Lizenzsystem** (RX‑only ohne Lizenz, TX‑Freischaltung mit gültiger Lizenz)
+
+---
+
+## 🔧 Hardware: Waveshare ESP32‑S3 Zero
+
+Der TNYSPOT ist optimiert für den **Waveshare ESP32‑S3 Zero**.
+
+### 📌 Pinbelegung
+
+| Funktion                 | ESP32‑S3 Pin |
+|-------------------------|--------------|
+| MMDVM RX (Modem → ESP)  | **4**        |
+| MMDVM TX (ESP → Modem)  | **3**        |
+| Modem Wakeup            | **7**        |
+| Modem BOOT0             | **8**        |
+| OLED SDA                | **6**        |
+| OLED SCL                | **5**        |
+
+🛠️ Aufbauanleitung
+1. ESP32‑S3 Zero vorbereiten
+ESP32‑S3 Zero per USB‑C anschließen
+
+Firmware mit esptool.py, PlatformIO oder Arduino IDE flashen
+
+Gerät startet automatisch im Access‑Point‑Modus
+
+2. OLED anschließen (SSD1306, 128x64)
+SDA → Pin 6
+
+SCL → Pin 5
+
+VCC → 3.3V
+
+GND → GND
+
+3. MMDVM‑Modem anschließen
+TX/RX kreuzen:
+
+Modem TX → ESP32 Pin 4
+
+Modem RX → ESP32 Pin 3
+
+Wakeup → Pin 7
+
+BOOT0 → Pin 8
+
+GND verbinden
+
+3.3V oder 5V je nach Modem
+
+4. Webinterface öffnen
+Nach dem Start erzeugt der Hotspot einen Access‑Point:
+
+SSID: TNYSPOT
+
+Passwort: TINYSPOT
+
+Webinterface öffnen unter:
+
+Code
+http://192.168.4.1
+Webinterface‑Passwort (Default): TNYSPOT
+
+🌐 WLAN & Netzwerke
+Der TNYSPOT speichert bis zu 5 WLAN‑Netzwerke.
+Falls kein bekanntes WLAN gefunden wird → AP‑Modus.
+
+Unterstützte Netzwerke:
+
+FreeDMR
+
+FDMR+
+
+Private Master
+
+Custom Server (manuell konfigurierbar)
+
+📥 DMR‑ID & Talkgruppen Download
+DMR‑ID‑Listen
+Unterstützt:
+
+TSV
+
+Semicolon‑getrennte Dateien
+
+⚠️ WICHTIGER HINWEIS
+Bei Dateien größer als 2 MB:
+
+👉 Bitte den Haken „Komprimiere Download“ aktivieren.
+
+Dann werden die Daten gestreamt, nicht vollständig in den PSRAM geladen.
+So wird nur so viel gespeichert, wie der RAM zulässt.
+
+Talkgruppen
+CSV‑Format
+
+Automatische Zuordnung
+
+Offline‑Speicherung
+
+🔐 Lizenzsystem
+Ohne Lizenz:
+
+RX‑only
+
+Gespräche aus dem Netzwerk können gehört werden
+
+TX ist gesperrt
+
+Mit Lizenz:
+
+TX wird freigeschaltet
+
+Lizenz ist an die Chip‑ID des ESP32‑S3 gebunden
+
+Signiert (ECDSA) und nicht manipulierbar
+
+Lizenz anfordern:
+
+Code
+tnyspot@von-ziemdorf.de
+Bitte die Chip‑ID des Geräts mitsenden (wird im Web‑IF angezeigt).
+
+🔒 Sicherheit
+Webinterface‑Passwort änderbar
+
+Hotspot‑AP‑Passwort änderbar
+
+Lizenzprüfung offline, sicher signiert
+
+Keine Cloud‑Abhängigkeit
+
+📦 Geplante Features / Ideen
+Multi‑Mode (D‑STAR, YSF)
+
+Bluetooth‑Konfiguration
+
+Firmware‑Update über Web‑IF
+
+Erweiterte UI‑Widgets
+
+Automatische Master‑Liste
+
+📧 Kontakt
+Fragen, Support oder Lizenzanfragen:
+
+E‑Mail:  
+tnyspot@von-ziemdorf.de
+
+📄 Lizenz
+Dieses Projekt ist proprietär.
+Die Nutzung der TX‑Funktion erfordert eine gültige Lizenz.
+
+Code
+Ohne Lizenz: RX‑only
+Mit Lizenz: TX freigeschaltet
+Viel Spaß mit dem TNYSPOT!
