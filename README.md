@@ -34,7 +34,8 @@ Der TNYSPOT ist optimiert für den **Waveshare ESP32‑S3 Zero**.
 (Für weitere Hardware-Unterstützung, Pinbelegungen etc. bitte per Mail Kontakt aufnehmen. **WICHTIG:** PSRAM wird dringend benötigt)
 
 ### 📌 Pinbelegung
-<img width="1920" height="1082" alt="Rückseite" src="https://github.com/user-attachments/assets/eb4bd71a-60a6-4e27-b40f-9c8c46ce48c4" />
+<img width="1920" height="1082" alt="back" src="https://github.com/user-attachments/assets/5b261336-107b-41dd-94ac-fbb432844039" />
+
 <img width="1920" height="1082" alt="vorderseite" src="https://github.com/user-attachments/assets/fcaec09a-577a-44bf-a7ce-122a05759341" />
 
 | Funktion                 | ESP32‑S3 Pin |
