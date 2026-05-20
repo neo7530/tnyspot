@@ -171,7 +171,7 @@ Automatische Master‑Liste
 Fragen, Support oder Lizenzanfragen:
 
 E‑Mail:  
-tnyspot@von-ziemdorf.de
+tnyspot@dynbox.cloud
 
 📄 Lizenz
 Dieses Projekt ist proprietär.
